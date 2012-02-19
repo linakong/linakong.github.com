@@ -75,27 +75,66 @@ html[xmlns] .clearfix { display: block; }
 
 
 
-
+/*start CSS*/
 
 body { width:800px;
 	margin:0 auto;
+	font-family:Georgia;
+	font-size:16px;
 	}
 
-body header{
-	background-color:red;
+body header img{
+	padding-left: 160px;
+	margin: 20px;
 }
 
 #main-nav{
+	margin-left: 180px;
+}
+
+#main-nav li{
+	display: inline;
+	margin: 20px;
+}
+
+#reason-container{
+	padding: 10px 0 10px 0;
+	line-height: 1.25em;
+}
+
+#reason-container img{
 	width:100%;
 	margin:0 auto;
 }
 
-.reason {
-	background-color:yellow;
-	width:50%;
+.reason-title{
+	font-weight: bold;
+	padding: 10px 0 10px 0;
 }
-.reason img{
-	width:100%;
+
+.dogreason {
+	width:48%;
+	float:left;
+	padding-top: 20px;
+}
+
+.catreason {
+	width:48%;
+	float:right;
+	padding-top: 20px;
+}
+
+#colophon {
+	clear:both;
+	padding: 20px 0 20px 0;
+}
+
+.content-copyright{
+	float: left;
+}
+
+.design-copyright{
+	float:right;
 }
 
 
