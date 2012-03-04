@@ -51,7 +51,7 @@ table {
 }
 
 
-/*CSS START
+/*RESET END CSS START
 Relatively positioned header
 Absolutely positioned top nav
 Image replacement logo
@@ -61,8 +61,7 @@ Relatively positioned footer*/
 
 
 body{
-width:960px;
-margin:0 auto;
+width:100%;
 font-family:trebuchet ms;
 font-size:16px;
 }
@@ -71,14 +70,12 @@ font-size:16px;
 background-color: #F5FFE5;
 }
 
-#menu-wrapper{
-background-color: #744908;
-}
-
 header#site-header {
   position:relative;
   height:130px;
   padding:5px;
+  margin:0 auto;
+  width:960px;
 }
 
 #site-header h1 a {
@@ -102,11 +99,17 @@ nav#top-nav a{
   color:#744908;
 }
 
+#menu-wrapper{
+background-color: #744908;
+}
+
 nav#main-menu {
 position:relative;
 height:30px;
 background-color:#744908;
 font-size:.90em;
+margin:0 auto;
+  width:960px;
 }
 
 nav#main-menu ul li {
@@ -125,16 +128,19 @@ letter-spacing:1px;
 }
 
 #content-wrapper{
+background-color:#F5F5F5;
 }
 
 #content {
 padding:10px;
+margin:0 auto;
+  width:960px;
 }
 
 article#page{
 float:left;
 width:500px;
-padding:20px 20px;
+padding:40px 30px;
 }
 
 article#page h1{
@@ -158,7 +164,7 @@ color:#5F5F5F;
 aside#sidebar {
 float:right;
 width:200px;
-padding:20px 10px;
+padding:50px 10px;
 }
 
 aside#sidebar ul li{
@@ -176,12 +182,17 @@ width:160px;
 padding:5px 0 0 0;
 }
 
-footer#site-footer {
+#footer-wrapper{
 clear:both;
 position:relative;
+width:100%;
 height:120px;
 background-color:#744908;
-padding:10px;
+}
+
+footer#site-footer {
+margin:0 auto;
+  width:960px;
  }
 
 footer#site-footer h1{
