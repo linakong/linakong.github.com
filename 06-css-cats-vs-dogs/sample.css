@@ -91,9 +91,9 @@ body header img{
 }
 
 #main-nav{
-	position: absolute;
+	position:absolute;
 	left:140px;
-	width:100%;
+	/*width:100%;*/
 }
 
 #main-nav li{

@@ -59,18 +59,163 @@ Floated menu items
 Floated body
 Relatively positioned footer*/
 
-#site-header h1 a {
- display:block;  
- width:?????px; 
- height:????px;  
- background:url(images/logo.png) no-repeat top left; 
- text-indent:-9999px;
- }
 
 body{
+width:960px;
+margin:0 auto;
+font-family:trebuchet ms;
+font-size:16px;
 }
 
+#site-wrapper{
+background-color: #F5FFE5;
+}
 
+#menu-wrapper{
+background-color: #744908;
+}
 
+header#site-header {
+  position:relative;
+  height:130px;
+  padding:5px;
+}
+
+#site-header h1 a {
+  display:block;  
+  width:306px; 
+  height:123px;  
+  background:url(images/logo.png) no-repeat top left; 
+  text-indent:-9999px;
+ }
+
+nav#top-nav {
+  position:absolute;
+  right:0px;
+  top:0px;
+  padding:5px;
+}
+
+nav#top-nav a{
+  text-decoration:none;
+  font-size:.8em;
+  color:#744908;
+}
+
+nav#main-menu {
+position:relative;
+height:30px;
+background-color:#744908;
+font-size:.90em;
+}
+
+nav#main-menu ul li {
+display:block;
+float:left;
+padding:2px 10px 2px 10px;
+}
+
+nav#main-menu ul li a {
+text-decoration:none;
+display:block;
+color:white;
+padding:5px 5px;
+text-transform:uppercase;
+letter-spacing:1px;
+}
+
+#content-wrapper{
+}
+
+#content {
+padding:10px;
+}
+
+article#page{
+float:left;
+width:500px;
+padding:20px 20px;
+}
+
+article#page h1{
+font-size:2em;
+color:#744908;
+}
+
+article#page h2{
+text-transform:uppercase;
+color:#744908;
+padding: 8px 0 8px 0;
+}
+
+article#page p{
+font-size:.80em;
+padding: 3px 0 3px 0;
+line-height:1.3em;
+color:#5F5F5F;
+}
+
+aside#sidebar {
+float:right;
+width:200px;
+padding:20px 10px;
+}
+
+aside#sidebar ul li{
+padding:2px;
+}
+
+aside#sidebar ul li a{
+text-decoration:none;
+color:#744908;
+font-size:.8em;
+}
+
+aside#sidebar img{
+width:160px;
+padding:5px 0 0 0;
+}
+
+footer#site-footer {
+clear:both;
+position:relative;
+height:120px;
+background-color:#744908;
+padding:10px;
+ }
+
+footer#site-footer h1{
+text-transform:uppercase;
+font-size:.9em;
+letter-spacing:1px;
+ }
+
+section#footer-contact{
+float:left;
+width: 200px;
+padding:20px 20px 20px 50px;
+color:#EADBC5;
+ }
+
+section#footer-contact p{
+font-size: 10px;
+line-height: 1.3em;
+padding-top:5px;
+ }
+
+section#footer-follow{
+float:right;
+padding:20px 100px 20px 20px;
+color:#EADBC5;
+ }
+
+section#footer-follow li{
+float:right;
+padding:5px 5px 5px 0;
+ }
+
+section#footer-follow li img{
+width:30px;
+ }
 
 
