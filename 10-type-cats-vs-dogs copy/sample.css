@@ -103,7 +103,7 @@ header{
 
 header #mainLogo{
 	position:relative;
-	left:200px;
+	left:240px;
 	padding-top:20px;
 	padding-bottom:25px;
 }
@@ -224,9 +224,7 @@ body header img{
 	#main-nav a{
 		font-size: 100%;
 	}
-	header #mainLogo{
-	width:100%;
-}
+
 header h3{
 	font-size:8em;
 }
@@ -242,6 +240,21 @@ header h4{
 	/*body{
 		background-color:pink;
 	}*/
+	
+	header #mainLogo{
+	left:140px;
+}
+
+header h3{
+	font-size:6em;
+}
+
+header h4{
+	font-size:2.5em;
+	border-top: 4px solid;
+	border-bottom: 4px solid;
+	line-height:1.25em;
+}
 	
 	body header img{
 		max-width:70%;
@@ -302,6 +315,17 @@ header h4{
 	/*body{
 	background-color:orange;
 	}*/
+	
+	header h3{
+	font-size:4.75em;
+}
+
+header h4{
+	font-size:1.5em;
+	border-top: 3px solid;
+	border-bottom: 3px solid;
+	line-height:1em;
+}
 	
 	body header img{
 		max-width:70%;
