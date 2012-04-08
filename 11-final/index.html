@@ -1,25 +1,83 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<title>Lina</title>
-	<link rel="stylesheet" media="screen" type='text/css' href="screen.css" />
+	<title>Lina Kong Designs</title>
+	<link rel="stylesheet" media="screen" type='text/css' href="main.css" />
+	<link href='http://fonts.googleapis.com/css?family=Enriqueta:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+
   </head>
   <body>
+	<div id ="headerWrapper">
 	<header>
-		<a href = "home.html"><img src ="images/logo.png" alt ="Lina Kong"/></a>
-		<nav id ="main-nav">
+		<a href = "#"><h1 class="logoType">LINA KONG</h1></a>
+		<nav id ="mainNav">
 			<ul>
-				<li><a href = "about.html">About</a></li>
-				<li><a href = "work.html">Work</a></li>
+				<li><a href = "#about">About</a></li>
+				<li><a href = "#work">Work</a></li>
+				<li><a href = "#contact">Contact</a></li>
 				<li><a href = "#">Blog</a></li>
 			</ul>
 		</nav>
 	</header>
+	</div>
+	
 	<section id ="contentWrapper">
-		<h1 class="greeting">Hello. You have somehow stumbled upon the design work of Lina Kong...</h1>
-	</section>
+	
+		<section id="hello">
+		<p>Hello. You have somehow stumbled upon the design work of Lina Kong...</p>
+		</section>
+		
+		<section id="about">
+			<h2>About</h2>
+			<article id="aboutBlurb">Blah blurb</article>
+		</section>
+		
+		<section id="work">
+			<section id ="worksList">
+				<h2>Projects</h2>
+				<ul>
+					<li><a href ="#"><img src ="images/thumb1.png" alt =""/></a></li>
+					<li><a href ="#"><img src ="images/thumb2.png" alt =""/></a></li>
+					<li><a href ="#"><img src ="images/logo.png" alt =""/></a></li>
+					<li><a href ="#"><img src ="images/logo.png" alt =""/></a></li>
+				</ul>
+			</section>
+			
+		<section class="project" id="one">
+			<h3>Project 1</h3>
+			<img src ="images/proj1main.jpg" alt=""/>
+			<article class="projBlurb">
+				Blurb about Project.
+			</article>
+		</section>
+		<section class="project" id="two">
+			<h3>Project 2</h3>
+			<img src ="images/proj1main.jpg" alt=""/>
+			<article class="projBlurb">
+				Blurb about Project.
+			</article>
+		</section>
+		<section class="project" id="three">
+			<h3>Project 3</h3>
+			<img src ="images/proj1main.jpg" alt=""/>
+			<article class="projBlurb">
+				Blurb about Project.
+			</article>
+		</section>
+		
+		</section>
+		
+		<section id="contact">
+		<h2>Contact Me</h2>
+		<p>You can reach me at lina.kong@massart.edu. Resume and references upon request.</p>
+		</section>
+	
 	<footer id ="footer">
 	<p class ="design-copyright">&copy;2012 Lina Kong</p>
 	</footer>
+	
+	</section> <!--closed contentWrapper-->
+	
   </body>
 </html>
