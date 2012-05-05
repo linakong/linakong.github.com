@@ -91,29 +91,34 @@ html[xmlns] .clearfix { display: block; }
 body {
 	width:100%;
 	margin:0 auto;
-	max-width:1140px;
+	max-width:960px;
 	font-family:Georgia;
 	font-size:1em;
+	line-height:1.25em;
+	overflow-x:hidden;
 	}
-
-/*header img{
-	float:left;
-	padding-left:10%;
-}*/
 
 .logoType{
 	position:relative;
-	top:20px;
+	top:30px;
 	left:50px;
 	width:100%;
-	text-decoration:none;
-	font-family:'Enriqueta', Georgia, serif;
-	color:black;
-	font-size: 1.75em;
 	padding:0  0 20px 0;
 }
 
+.logoType a{
+	font-family:'Enriqueta', Georgia, serif;
+	color:black;
+	font-size: 1.80em;
+	text-decoration:none;
+	font-weight:900;
+}
+
 /* ===== mainNav ===== */
+
+#headerWrapper{
+	background-color:white;
+}
 
 header{
 	width:100%;
@@ -125,12 +130,10 @@ header{
 
 #mainNav{
 	position:relative;
-	top:15px;
+	top:2px;
 	left:30px;
 	font-family: 'Abel', Helvetica, sans-serif;
 	font-size:1em;
-	text-transform:uppercase;
-	letter-spacing:1px;
 }
 
 header #mainNav ul li{
@@ -150,6 +153,7 @@ header #mainNav ul li a:hover{
 /* ===== content ===== */
 
 
+
 #contentWrapper{
 	position: relative;
 	top: 100px;
@@ -157,46 +161,102 @@ header #mainNav ul li a:hover{
 }
 
 #hello{
-background-color:#FAE017;
 	height:100%;
 	max-width:70%;
 	font-size:3.10em;
-	padding: 95px 20px 600px 0px;
+	padding: 90px 20px 600px 0px;
 	line-height:1.25em;
 	font-weight:bold;
 	font-family:'Enriqueta', Georgia, serif;
 }
 
+#highlighter{
+background-color:yellow;
+line-height:1.50em;
+}
+
 h2{
-	font-family: 'Enriqueta', Helvetica, sans-serif;
+	font-family:'Enriqueta', Helvetica, sans-serif;
 	font-size:1.25em;
 	text-transform:uppercase;
 	letter-spacing:1px;
-	padding: 10px 0;
+	padding: 20px 0;
 }
 
 #about{
 /*background-color:#4BBC35; green*/
-background-color:#E34120;
+/*background-color:#E34120;*/
 	height:100%;
 	max-width: 70%;
-	padding: 110px 0 600px 0;
+	padding: 140px 0 600px 0;
+}
+
+.quote{
+	line-height:1.25em;
+	padding:40px;
+	font-family: 'Abel';
+	font-size:2.5em;
 }
 
 #work{
 	height:100%;
-	max-width: 70%;
-	padding: 110px 0 600px 0;
+	max-width: 65%;
+	padding: 140px 0 600px 0;
 }
 
 #worksList{
 	height:100%;
-	max-width: 70%;
-	padding: 0 0 600px 0;
+	max-width: 100%;
+}
+
+#worksList ul {
+	padding-bottom:500px;
+}
+
+#worksList ul li img{
+	width:70%;
+	padding-bottom:10px;
+	border-bottom: 6px solid #393939;
+}
+
+#worksList ul li img:hover{
+	border-bottom: 6px solid yellow;
+}
+
+#worksList ul li{
+	float:left;
+	padding:10px 2px;
+	width:150px;
 }
 
 .project{
 	padding-bottom:30px;
+	border: 1px solid light-grey;
+	padding-top:110px;
+}
+
+.projBlurb{
+	padding: 20px 0 3px 0;
+	font-family:Georgia;
+	font-size:.89em;
+}
+
+.top{
+	font-family:'Abel';
+	padding: 15px 0;
+	font-size:1em;
+	text-decoration:none;
+	color:black;
+}
+
+.top a{
+	text-decoration:none;
+	color:black;
+}
+
+.top a:hover{
+	text-decoration:none;
+	color:red;
 }
 
 h3{
@@ -208,7 +268,7 @@ h3{
 #contact{
 	height:100%;
 	max-width: 70%;
-	padding: 90px 0 300px 0;
+	padding: 140px 0 600px 0;
 }
 
 #footer{
@@ -216,21 +276,86 @@ h3{
 	float:left;
 	max-width: 70%;
 	padding: 20px 0px;
+	font-family: 'Abel';
+	text-transform:uppercase;
+	letter-spacing:1px;
+	font-size:.9em
+}
+
+.designCopyright{
+	background-color:red;
 }
 
 
 /*============ @media =============*/
 
-@media screen and (max-width: 960px){
-	
+
+@media screen and (max-width: 720px){
+
+body{
+	font-size:.95em;
 }
 
+.logoType{
+	left:20px;
+}
 
-@media screen and (max-width: 700px){
+.logoType a{
+	font-size:150%;
+	}
 	
+#contentWrapper{
+	left: 13.5%;
+}
+
+#mainNav{
+	left:3px;
+	font-size:1em;
+}
+
+#hello{
+	height:100%;
+	max-width:70%;
+	font-size:220%;
+	padding: 60px 20px 600px 20px;
+	line-height:.9em;
+	font-weight:bold;
+}
+
+#highlighter{
+background-color:yellow;
+line-height:1.5em;
+}
+
+.quote{
+	line-height:1.10em;
+	padding:40px;
+	font-family: 'Abel';
+	font-size:1.9em;
+}
+
+h2{
+	font-size:100%;
+	padding: 10px 0;
+}
+
+#work{
+	height:100%;
+	max-width: 80%;
+}
+
 }
 
 
 @media screen and (max-width: 480px){
-	
+
+#hello{
+	height:100%;
+	max-width:70%;
+	font-size:180%;
+	padding: 60px 20px 600px 0px;
+	line-height:.7em;
+	font-weight:bold;
+}
+
 }

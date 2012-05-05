@@ -3,14 +3,125 @@
   <head>
 	<title>Lina Kong Designs</title>
 	<link rel="stylesheet" media="screen" type='text/css' href="main.css" />
+	<link rel="stylesheet" type="text/css" href="elastislide.css" />
 	<link href='http://fonts.googleapis.com/css?family=Enriqueta:700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="nivo-slider/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<!--smooth scrolling-->
+	<script>
+	$(function() {
+	
+		function filterPath(string) {
+			return string
+			.replace(/^\//,'')
+			.replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+			.replace(/\/$/,'');
+		}
+	
+		var locationPath = filterPath(location.pathname);
+		var scrollElem = scrollableElement('html', 'body');
+	
+		// Any links with hash tags in them (can't do ^= because of fully qualified URL potential)
+		$('a[href*=#]').each(function() {
+	
+			// Ensure it's a same-page link
+			var thisPath = filterPath(this.pathname) || locationPath;
+			if (  locationPath == thisPath
+				&& (location.hostname == this.hostname || !this.hostname)
+				&& this.hash.replace(/#/,'') ) {
+	
+					// Ensure target exists
+					var $target = $(this.hash), target = this.hash;
+					if (target) {
+	
+						// Find location of target
+						var targetOffset = $target.offset().top;
+						$(this).click(function(event) {
+	
+							// Prevent jump-down
+							event.preventDefault();
+	
+							// Animate to target
+							$(scrollElem).animate({scrollTop: targetOffset}, 300, function() {
+	
+								// Set hash in URL after animation successful
+								location.hash = target;
+	
+							});
+						});
+					}
+			}
+	
+		});
+	
+		// Use the first element that is "scrollable"  (cross-browser fix?)
+		function scrollableElement(els) {
+			for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+				var el = arguments[i],
+				$scrollElement = $(el);
+				if ($scrollElement.scrollTop()> 0) {
+					return el;
+				} else {
+					$scrollElement.scrollTop(1);
+					var isScrollable = $scrollElement.scrollTop()> 0;
+					$scrollElement.scrollTop(0);
+					if (isScrollable) {
+						return el;
+					}
+				}
+			}
+			return [];
+		}
+	
+	});
+	</script>
+	
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript">
+			$('#carousel').elastislide({
+				imageW 		: 200,
+				minItems	: 3,
+				border		: 0,
+				easing		:''
+			});
+		</script>
+		
+	<script type="text/javascript" src="nivo-slider/nivo/scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="nivo-slider/nivo/scripts/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider({
+        effect: 'fade',
+        });
+        $('#slider2').nivoSlider({
+        effect: 'fade',
+        });
+        $('#slider3').nivoSlider({
+        effect: 'fade',
+        });
+        $('#slider4').nivoSlider({
+        effect: 'fade',
+        });
+        $('#slider5').nivoSlider({
+        effect: 'fade',
+        });
+    });
+    </script>
 
+	
+	
   </head>
   <body>
-	<div id ="headerWrapper">
 	<header>
-		<a href = "#"><h1 class="logoType">LINA KONG</h1></a>
+	<div id ="headerWrapper">
+		<h1 class="logoType"><a href = "#">LINA KONG</a></h1>
 		<nav id ="mainNav">
 			<ul>
 				<li><a href = "#about">About</a></li>
@@ -19,64 +130,122 @@
 				<li><a href = "#">Blog</a></li>
 			</ul>
 		</nav>
-	</header>
 	</div>
+	</header>
 	
 	<section id ="contentWrapper">
 	
 		<section id="hello">
-		<p>Hello. You have somehow stumbled upon the design work of Lina Kong...</p>
+		<span id="highlighter">Hello. You have somehow stumbled upon the design work of Lina Kong...</span>
 		</section>
 		
 		<section id="about">
 			<h2>About</h2>
-			<article id="aboutBlurb">Blah blurb</article>
+			<article id="aboutBlurb">Hiyo. I'm Lina Kong, currently studying Graphic Design at Massart. 
+			I like to make things.</article>
+			<div class="quote"><p>"Home is not where you live,</p><p>but where they understand you."</p>
+ <p>&#8212; Christian Morgenstern</p></div>
 		</section>
 		
 		<section id="work">
 			<section id ="worksList">
 				<h2>Projects</h2>
-				<ul>
-					<li><a href ="#"><img src ="images/thumb1.png" alt =""/></a></li>
-					<li><a href ="#"><img src ="images/thumb2.png" alt =""/></a></li>
-					<li><a href ="#"><img src ="images/logo.png" alt =""/></a></li>
-					<li><a href ="#"><img src ="images/logo.png" alt =""/></a></li>
-				</ul>
+						<ul>
+							<li><a href ="#Dymax"><img src ="images/dymaxionman/thumbDymax.jpg" alt =""/></a></li>
+							<li><a href ="#Footfall"><img src ="images/footfall/thumbFootfall.jpg" alt =""/></a></li>
+							<li><a href ="#Infuse"><img src ="images/infuse/thumbInfuse.jpg" alt =""/></a></li>
+							<li><a href ="#CG"><img src ="images/CG/thumbCommonground.jpg" alt =""/></a></li>
+							<li><a href ="#ubu"><img src ="images/ubu/thumbUbu.jpg" alt =""/></a></li>
+						</ul>
 			</section>
 			
-		<section class="project" id="one">
-			<h3>Project 1</h3>
-			<img src ="images/proj1main.jpg" alt=""/>
+		<section class="project" id="Dymax">
+			<h3>Dymaxion Man</h3>
+			<div class="slider-wrapper theme-default">
+				<div id="slider" class="nivoSlider">
+					<img src ="images/dymaxionman/dymaxFINAL1a.jpg" alt=""/>
+					<img src ="images/dymaxionman/dymaxFINAL2a.jpg" alt=""/>
+					<img src ="images/dymaxionman/dymaxFINAL4a.jpg" alt=""/>
+				</div>
+			</div>
 			<article class="projBlurb">
-				Blurb about Project.
+				<p>Editorial Spreads on the quirkiness of Buckminster Fuller.</p>
 			</article>
+			<span class ="top"><a href ="#work">Back to Work</a></span>
 		</section>
-		<section class="project" id="two">
-			<h3>Project 2</h3>
-			<img src ="images/proj1main.jpg" alt=""/>
+		<section class="project" id="Footfall">
+			<h3>Footfall</h3>
+			<div class="slider-wrapper theme-default">
+				<div id="slider2" class="nivoSlider">
+				<img src ="images/footfall/footfall1.jpg" alt=""/>
+				<img src ="images/footfall/footfall2.jpg" alt=""/>
+				<img src ="images/footfall/footfall3.jpg" alt=""/>
+				</div>
+			</div>
 			<article class="projBlurb">
-				Blurb about Project.
+				<p>Footfall is a map interface for foot traffic in the neighborhood of Fenway in Boston.</p>
 			</article>
+			<span class ="top"><a href ="#work">Back to Work</a></span>
 		</section>
-		<section class="project" id="three">
-			<h3>Project 3</h3>
-			<img src ="images/proj1main.jpg" alt=""/>
+		<section class="project" id="Infuse">
+			<h3>Infuse Magazine</h3>
+			<div class="slider-wrapper theme-default">
+				<div id="slider3" class="nivoSlider">
+				<img src ="images/infuse/compile5pbind6.jpg" alt=""/>
+				<img src ="images/infuse/compile5pbind11.jpg" alt=""/>
+				<img src ="images/infuse/compile5pbind15.jpg" alt=""/>
+				</div>
+			</div>
 			<article class="projBlurb">
-				Blurb about Project.
+				<p>Infuse is a magazine on global tea culture for a primarily Western audience.</p>
 			</article>
+			<span class ="top"><a href ="#work">Back to Work</a></span>
+		</section>
+		<section class="project" id="CG">
+			<h3>Common Ground Conference</h3>
+			<div class="slider-wrapper theme-default">
+				<div id="slider4" class="nivoSlider">
+				<img src ="images/CG/commongroundSmall.jpg" alt=""/>
+				<img src ="images/CG/arrowSign.jpg" alt=""/>
+				<img src ="images/CG/enviro3.jpg" alt=""/>
+				</div>
+			</div>
+			<article class="projBlurb">
+				<p>Branding for a conference that fosters inter-cultural, inter-ethnic, and inter-religious
+				relationships internationally. Based on the idea of the legacy of stamps: no matter what 
+				background you have and no matter how it is represented, the idea is still prevalent through
+				the dove and olive leaves&#8212;the idea of peace.</p>
+			</article>
+			<span class ="top"><a href ="#work">Back to Work</a></span>
+		</section>
+		<section class="project" id="ubu">
+			<h3>Ubu Roi Artist Book</h3>
+			<div class="slider-wrapper theme-default">
+				<div id="slider5" class="nivoSlider">
+				<img src ="images/ubu/ubu1.jpg" alt=""/>
+				<img src ="images/ubu/ubu2.jpg" alt=""/>
+				</div>
+			</div>
+			<article class="projBlurb">
+				<p>An artist based on Alfred Jarry's "Ubu Roi." Ubu, a greedy and foolish idiot, 
+				manages to usurp his kingdom's throne. This artist book compares his bloody and 
+				gruesome journey to his preparing and cooking a meal.</p>
+			</article>
+			<span class ="top"><a href ="#work">Back to Work</a></span>
 		</section>
 		
 		</section>
 		
 		<section id="contact">
-		<h2>Contact Me</h2>
+		<h2>Questions? Comments? Concerns?</h2>
 		<p>You can reach me at lina.kong@massart.edu. Resume and references upon request.</p>
+		<span class ="top"><a href ="#">Back to Top</a></span>
 		</section>
 	
 	<footer id ="footer">
 	<p class ="design-copyright">&copy;2012 Lina Kong</p>
 	</footer>
-	
+    
 	</section> <!--closed contentWrapper-->
 	
   </body>

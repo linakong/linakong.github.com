@@ -1,0 +1,94 @@
+/*=================================*/
+/* Nivo Slider Demo
+/* November 2010
+/* By: Gilbert Pellegrom
+/* http://dev7studios.com
+/*=================================*/
+
+
+/*===================*/
+/*=== Main Styles ===*/
+/*===================*/
+
+/*css positioning of slider*/
+
+.theme-default #slider {
+    margin: auto 0 auto;
+    width:100%; /* Make sure your images are the same size */
+    height:100%; /* Make sure your images are the same size */
+    z-index:0;
+}
+
+.theme-default #slider2 {
+    margin: auto 0 auto;
+    width:100%; /* Make sure your images are the same size */
+    height:100%; /* Make sure your images are the same size */
+    z-index:0;
+}
+
+.theme-default #slider3 {
+    margin: auto 0 auto;
+    width:100%; /* Make sure your images are the same size */
+    height:100%; /* Make sure your images are the same size */
+    z-index:0;
+}
+
+.theme-default #slider4 {
+    margin: auto 0 auto;
+    width:100%; /* Make sure your images are the same size */
+    height:100%; /* Make sure your images are the same size */
+    z-index:0;
+}
+
+.theme-default #slider5 {
+    margin: auto 0 auto;
+    width:100%; /* Make sure your images are the same size */
+    height:100%; /* Make sure your images are the same size */
+    z-index:0;
+}
+/*========== MEDIA QUERY =============*/
+
+/*http://themeforest.net/forums/thread/how-to-make-nivo-slider-responsive-/55740*/
+
+@media screen and (max-width: 700px){
+.theme-default #slider {
+	max-width:600px;
+	height:100%;
+}
+
+.theme-default #slider2 {
+    margin: auto 0 auto;
+    width:100%; /* Make sure your images are the same size */
+    height:100%; /* Make sure your images are the same size */
+    z-index:0;
+}
+
+.theme-default #slider3 {
+    margin: auto 0 auto;
+    width:100%; /* Make sure your images are the same size */
+    height:100%; /* Make sure your images are the same size */
+    z-index:0;
+}
+
+.theme-default #slider4 {
+    margin: auto 0 auto;
+    width:100%; /* Make sure your images are the same size */
+    height:100%; /* Make sure your images are the same size */
+    z-index:0;
+}
+
+.theme-default #slider5 {
+    margin: auto 0 auto;
+    width:100%; /* Make sure your images are the same size */
+    height:100%; /* Make sure your images are the same size */
+    z-index:0;
+}
+}
+
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+	clear:both;
+}
